@@ -1,0 +1,50 @@
+#include <ros/ros.h>
+#include <sensor_msgs/LaserScan.h>
+
+void newLaserscanCallback(const sensor_msgs::LaserScan::ConstPtr& _laserscan)
+{
+  std::vector<double> ranges;
+  ranges.resize(_laserscan->ranges.size());
+  std::vector<double> angles(_laserscan->ranges.size(), 0.0);
+
+  for(int i = 0; i < _laserscan->ranges.size(); i++)
+  {
+    double range = _laserscan->ranges[i];
+
+    if (range < _laserscan->range_min || range > _laserscan->range_max)
+    {
+      // Out-of-range laser scan
+      ranges[i] = std::numeric_limits<double>::infinity();
+    }
+    else if (std::isfinite(range))
+    {
+      // has finite range
+      ranges[i] = range;
+    }
+    else
+    {
+      // Can not be determined
+      ranges[i] = std::numeric_limits<double>::infinity();
+    }
+    angles[i] = _laserscan->angle_min + _laserscan->angle_increment * i;
+  }
+
+  ROS_INFO_STREAM("[LaserScan #" << _laserscan->header.seq << "] # of ranges: " << _laserscan->ranges.size());
+
+  for(int i = 0; i < ranges.size(); i = i + 10)
+  {
+    std::cout << "Angle: " << angles[i] << ", Range: " << ranges[i] << ", Raw Range: " << _laserscan->ranges[i] << "\n";
+  }
+}
+
+int main(int argc, char **argv)
+{
+  ros::init(argc, argv, "laser_subscriber_node");
+  ros::NodeHandle nh;
+
+  ros::Subscriber sub = nh.subscribe("scan", 10, newLaserscanCallback);
+
+  ros::spin();
+
+  return 0;
+}
