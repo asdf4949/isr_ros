@@ -1,0 +1,23 @@
+[ INFO] [1534765050.578516652]: This robot's TicksMM parameter: 128
+[ INFO] [1534765050.579949378]: This robot's DriftFactor parameter: 0
+[ INFO] [1534765050.581236345]: This robot's RevCount parameter: 16570
+[ INFO] [1534765050.618391405]: rosaria: Setup complete
+[ INFO] [1534765050.618575996]: getRobotLength: 511.000000
+[ INFO] [1534765050.618616574]: getRobotLengthFront: 210.000000
+[ INFO] [1534765050.618645418]: getRobotLengthRead: 301.000000
+[ INFO] [1534765050.618677615]: getRobotWidth: 425.000000
+[ INFO] [1534765050.618705901]: getRobotRadius: 250.000000
+[ INFO] [1534765050.618737748]: getAbsoluteMaxRotAccel: 300.000000
+[ INFO] [1534765050.618763869]: getAbsoluteMaxRotDecel: 300.000000
+[ INFO] [1534765050.618842511]: getAbsoluteMaxRotVel: 360.000000
+[ INFO] [1534765050.618872053]: getAbsoluteMaxTransVel: 1500.000000
+[ INFO] [1534765050.618901038]: getAbsoluteMaxTransAccel: 2000.000000
+[ INFO] [1534765050.618928346]: getAbsoluteMaxTransDecel: 2000.000000
+[ INFO] [1534765050.618960263]: getRobotLengthFront: 210.000000
+[ INFO] [1534765050.618991412]: getRobotLengthRead: 301.000000
+[ INFO] [1534765050.619018790]: getRobotWidth: 425.000000
+[ INFO] [1534765050.619045400]: getRobotRadius: 250.000000
+[ INFO] [1534765050.628888705]: RosAria: publishing new recharge state 0.
+[ INFO] [1534765050.629031880]: RosAria: publishing new motors state 0.
+[ INFO] [1534765050.724623649]: RosAria: publishing new motors state 1.
+

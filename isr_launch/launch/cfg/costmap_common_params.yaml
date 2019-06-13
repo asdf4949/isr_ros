@@ -1,0 +1,11 @@
+obstacle_range: 2.5
+raytrace_range: 3.0
+footprint: [[0.4, 0.4], [0.4, -0.4], [-0.4, -0.4], [-0.4, 0.4]] # if robot is not circular
+#footprint_clearing_enabled: true
+robot_radius: 0.5
+inflation_radius: 0.4
+
+observation_sources: scan
+
+scan: {sensor_frame: laser, data_type: LaserScan, topic: scan, marking: true, clearing: true, expected_update_rate: 0.5, observation_persistence: 0.5}
+

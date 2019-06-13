@@ -1,0 +1,8 @@
+<launch>
+<node name="map_server" pkg="map_server" type="map_server" args="$(find isr_launch)/map/25/map.yaml"/>
+<node pkg="fake_laser" type="fake_laser" name="fake_laser"    output="screen">
+    <param name="frame_id"            type="string" value="laser"/>
+</node>
+<node pkg="tf" type="static_transform_publisher" name="BaseToFakeLaser" args="30.937 20.239 0 0 0 0 map laser 100" />
+
+</launch>

@@ -1,0 +1,8 @@
+image: map.pgm
+resolution: 0.025000
+#origin: [-26.175, -33.7375, 0.000000] # only sbpl
+origin: [0.0, 0.0, 0.0] # tetra, simulation
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
